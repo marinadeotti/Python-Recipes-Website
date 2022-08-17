@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% block title %} Recipes Website {% endblock %}
+{% block body %}
+
+<div class="hero mb-5">
+    <div class="container"> 
+        <div class="row">
+            <div class="col-12">
+                <h1 class="title green mb-4">It's time for cooking!</h1>
+                <span class="subtitle yellow">Searh for over 365,000 recipes and 86,000 food products.</span>
+            </div>
+        </div>
+    </div>
+ </div>
+ <div class="container"> 
+    <div class="row search-navigation">
+         <div class="col-12 text-center">
+            <p><span class="subtitle">Search by:</span></p> 
+            <ul class="nav nav-pills d-flex justify-content-center mb-5" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                <button class="nav-link flex-sm-fill text-sm-center  active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fa-solid fa-bowl-food"></i> Recipe</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                <button class="nav-link flex-sm-fill text-sm-center" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fa-solid fa-apple-whole"></i> Ingredients</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                <button class="nav-link flex-sm-fill text-sm-center" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><i class="fa-solid fa-clipboard-list"></i> Nutrients</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                        <h2 class="subtitle bold">
+                            What recipe are you looking for? <br>
+                    </h2>
+                    <br>
+                    <form class="d-flex justify-content-center" action="/recipes" method="get">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Apple pie" aria-label="recipe" aria-describedby="recipe" name="recipe">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">Let's go!</button>
+                            </div>          
+                        </div>
+                    </form>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                        <h2 class="subtitle bold">
+                            What do you have in the fridge? <br>
+                        </h2>
+                        <br>
+                        <form class="d-flex justify-content-center" action="/ingredients" method="get">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Apple, flour, sugar" aria-label="ingredients" aria-describedby="ingredients" name="ingredients">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit">Let's go!</button>
+                                </div>          
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+                        <h2 class="subtitle bold">Which nutrients are you looking for?</h2>
+                        <br>
+                        <form action="/nutrients" method="get">
+                            <div class=" d-flex justify-content-center">
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label for="minProtein" class="form-label">Protein (g)</label>
+                                        <input type="number" class="form-control" id="minProtein" value="0" aria-label="minProtein" aria-describedby="minProtein" name="minProtein">
+                                    </div>
+                                    <div class="col">
+                                        <label for="minCarbs" class="form-label">Carbs (g)</label>
+                                        <input type="number"  class="form-control" id="minVitaminC" value="0" aria-label="minCarbs" aria-describedby="minCarbs" name="minCarbs">
+                                    </div>
+                                    <div class="col">
+                                        <label for="minFat" class="form-label">Fat (g)</label>
+                                        <input type="number"  class="form-control" id="minFat" value="0" aria-label="minFat" aria-describedby="minFat" name="minFat">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary mt-2" type="submit">Let's go!</button>     
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

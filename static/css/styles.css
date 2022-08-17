@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700;900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    background: #FFF;
+    color:#4D3A22;
+    line-height: 1.8;
+}
+a, .nav-link {
+    color:#4D3A22;
+}
+a:hover, .nav-link:hover {
+    color:#9E6D3A;
+}
+
+/* Font styles */
+.black {
+    font-weight: 900;
+}
+.bold, b {
+    font-weight: 700;
+}
+.red{
+    color: #E06338
+}
+.yellow{
+    color: #FFE7A3
+}
+.dark-brown{
+    color: #4D3A22
+}
+.light-brown{
+   color: #9E6D3A
+}
+.green {
+    color:#6DB054
+}
+.title {
+    font-size:48px;
+    font-weight: 700;
+}
+.subtitle {
+    font-size: 20px;
+}
+
+/* Background Styles */
+.bg-red{
+    background-color: #E06338
+}
+.bg-yellow{
+    background-color: #FFE7A3
+}
+.bg-dark-brown{
+    background-color: #4D3A22
+}
+.bg-light-brown{
+    background-color: #9E6D3A
+}
+.bg-green {
+    background-color:#6DB054
+}
+
+/* Buttons */
+.btn-primary, .btn-primary:hover, .btn-primary:active {
+    background-color: #4D3A22 !important;
+    color:#FFE7A3;
+    border-color:#4D3A22;
+}
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active {
+    background-color: #FFE7A3 !important;
+    color:#4D3A22;
+    border:1px solid #FFE7A3;
+    font-weight: 700;
+}
+.topbar {
+    background-color: #fff4d7;
+    text-align:center;
+}
+.navbar-brand, .navbar-brand:hover {
+    color: #4D3A22;
+    text-align: center;
+    font-size:28px;
+    font-weight: 700;
+}
+.navbar-brand a, .navbar-brand a:hover {
+    text-decoration: none;
+    color:#4D3A22
+}
+.navbar-brand i {
+    display: block;
+    clear:both;
+    margin-bottom: 2px;
+}
+.navbar-brand i:before {
+    color:#9E6D3A !important;
+    font-size: 45px;
+}
+
+.hero {
+    background-image:url('../images/bg-hero.jpg') ;
+    background-position: center;
+    background-size: cover;
+    padding:80px 0;
+    text-align:center;
+}
+
+.search-navigation i:before {
+    color:#E06338;
+    margin-right:5px;
+}
+
+@media screen and (min-width: 784px) {
+    form {
+        max-width: 50%;
+        margin:0 auto
+    }
+}
+
+footer {
+  background: #4D3A22;
+  padding:50px 0;
+  color: #9E6D3A;
+  font-size: small;
+  text-align: center;
+  margin-top:80px
+}
+
+/*Bootstrap Overrides */
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #4D3A22;
+    color:#FFE7A3
+}
+.form-control, .form-control:focus {
+    background-color: #FFE7A3;
+    border-color:#9E6D3A;
+    color:#4D3A22;
+    outline:none !important;
+}
+.form-control::placeholder {
+    color:#807362 
+}
+
+input[type="number"] {
+    max-width:150px;
+    margin:0 auto
+}
+
+form label {
+    font-size: 16px;
+}
+
+.card-footer {
+    padding-bottom: 20px;
+    padding-top:0;
+    background-color:transparent;
+    border-top: none;
+}
